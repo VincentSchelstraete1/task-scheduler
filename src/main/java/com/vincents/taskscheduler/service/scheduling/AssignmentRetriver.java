@@ -1,15 +1,16 @@
-package com.vincents.taskscheduler;
-import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
+package com.vincents.taskscheduler.service;
 import com.google.api.services.classroom.Classroom;
 import com.google.api.services.classroom.model.Course;
 import com.google.api.services.classroom.model.CourseWork;
+import com.vincents.taskscheduler.GoogleClassroomService;
+import com.vincents.taskscheduler.PlannedTask;
+import com.vincents.taskscheduler.PlannedTaskGenerator;
 import org.springframework.stereotype.Service;
 import com.google.api.services.classroom.model.Date;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 

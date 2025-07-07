@@ -1,17 +1,11 @@
 package com.vincents.taskscheduler;
 
-import com.google.api.client.auth.oauth2.Credential;
-import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeFlow;
-import com.google.api.client.googleapis.auth.oauth2.GoogleClientSecrets;
-import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
-
 import com.google.api.services.classroom.Classroom;
 import com.google.api.services.classroom.model.Course;
 import com.google.api.services.classroom.model.ListCoursesResponse;
+import com.vincents.taskscheduler.util.GoogleAuthUtil;
 import org.springframework.stereotype.Service;
 
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.List;
 
 @Service

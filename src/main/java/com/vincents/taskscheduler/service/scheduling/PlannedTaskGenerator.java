@@ -1,21 +1,21 @@
-package com.vincents.taskscheduler;
+package com.vincents.taskscheduler.service.scheduling;
 
 import com.google.api.services.classroom.Classroom;
 import com.google.api.services.classroom.model.Course;
 import com.google.api.services.classroom.model.CourseWork;
+import com.vincents.taskscheduler.model.PlannedTask;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.time.temporal.ChronoUnit;
-import java.util.Map;
 
 
-public class PlannedTaskGenerator{
+public class CalendarScheduler {
     private final GoogleClassroomService classroomService;
     private final AssignmentRetriver assignmentRetriver;
 
-    public PlannedTaskGenerator(GoogleClassroomService classroomService, AssignmentRetriver assignmentRetriver) {
+    public CalendarScheduler(GoogleClassroomService classroomService, AssignmentRetriver assignmentRetriver) {
         this.classroomService = classroomService;
         this.assignmentRetriver = assignmentRetriver;
     }
@@ -30,7 +30,7 @@ public class PlannedTaskGenerator{
                 System.out.println("failed to initialize Classroom service");
             }
 
-            List<CourseWork> assignments = assignmentRetriver.fetchActiveAssignments(course);
+            List<CourseWork> assignments = assignmentRetriver.fetchActiveAssignments(course.getId());
 
             for (CourseWork assignment: assignments) {
 //                String assignmentID = assignment.getId();
