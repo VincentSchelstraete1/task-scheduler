@@ -1,4 +1,4 @@
-package com.vincents.taskscheduler;
+package com.vincents.taskscheduler.service.scheduling;
 
 import com.google.api.services.classroom.Classroom;
 import com.google.api.services.classroom.model.Course;

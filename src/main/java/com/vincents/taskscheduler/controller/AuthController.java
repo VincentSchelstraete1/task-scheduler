@@ -1,7 +1,8 @@
-package com.vincents.taskscheduler;
+package com.vincents.taskscheduler.controller;
 
 import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeFlow;
 
+import com.vincents.taskscheduler.service.scheduling.GoogleClassroomService;
 import com.vincents.taskscheduler.service.scheduling.AssignmentRetriver;
 import com.vincents.taskscheduler.util.GoogleAuthUtil;
 import org.springframework.stereotype.Controller;
@@ -24,14 +25,6 @@ public class AuthController {
     public String listCourses(){
         return classroomService.listCourses();
     }
-
-    @GetMapping("/getassignments")
-    @ResponseBody
-    public String getAssignments(){
-        return assignmentRetriver.listCourseAssignments();
-    }
-
-
 
     @GetMapping
     public String authorizeUser(){

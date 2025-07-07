@@ -1,4 +1,4 @@
-package com.vincents.taskscheduler;
+package com.vincents.taskscheduler.service.scheduling;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,6 +28,15 @@ public class TimeEstimatorService {
         }
         return 60;
     }
+
+//    public Integer estimateFromAI(String courseName, String title, String description) {
+//        String prompt = "Estimate how many minutes it will take a high school student to complete this tasl /n" +
+//                "Course Title: " + courseName + "/n" +
+//                "Assignment Title: " + title + "/n" +
+//                "Assignment Description: " + description;
+//
+//
+//    }
 
     public List<Long> divideAcrossDays(int totalMinutes, Long days) {
         List<Long> chunks = new ArrayList<>();

@@ -1,4 +1,4 @@
-package com.vincents.taskscheduler;
+package com.vincents.taskscheduler.util;
 
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeFlow;
@@ -9,6 +9,7 @@ import com.google.api.client.json.gson.GsonFactory;
 import com.google.api.client.util.store.FileDataStoreFactory;
 import com.google.api.services.calendar.Calendar;
 import com.google.api.services.classroom.Classroom;
+import com.vincents.taskscheduler.controller.AuthController;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;

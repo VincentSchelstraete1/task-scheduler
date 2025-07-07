@@ -1,4 +1,4 @@
-package com.vincents.taskscheduler;
+package com.vincents.taskscheduler.controller;
 
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeFlow;
